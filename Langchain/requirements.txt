@@ -7,3 +7,5 @@ bs4
 arxiv 
 pymupdf
 langchain-text-splitters
+sentence_transformers
+langchain_huggingface
