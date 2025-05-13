@@ -20,4 +20,13 @@ parser=StrOutputParser()
 
 chain=prompt_template|model|parser
 
-app = FastAPI(title='Langchain Server', )
+app = FastAPI(title='Langchain Server',version="1.0",
+            description="A simple API server using Langchain runnable interfaces")
+
+add_routes(
+    app,chain,path ='/chain'
+)
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app,host='127.0.0.1',port=8000)
